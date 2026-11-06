@@ -148,6 +148,49 @@ section h2 {
     margin-bottom: 30px;
 }
 
+/* Surprise Message */
+
+#surpriseMessage {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background-color: #2b1940;
+    border: 1px solid #5d477f;
+    border-radius: 15px;
+    animation: fadeIn 0.8s ease;
+}
+
+#surpriseMessage h3 {
+    color: #c4a7ff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#surpriseMessage p {
+    color: #c5bbd6;
+    margin-bottom: 0;
+}
+
+/* Hide Surprise Message */
+
+.hidden {
+    display: none;
+}
+
+/* Reveal Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Footer */
 
 footer {
