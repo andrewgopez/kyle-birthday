@@ -220,3 +220,106 @@ footer {
         opacity: 0;
     }
 }
+
+/* Responsive Design */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .photo-container {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    nav h2 {
+        font-size: 19px;
+    }
+
+    nav time {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    button {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .photo-container img {
+        border-radius: 10px;
+    }
+
+    #surpriseMessage {
+        padding: 20px;
+    }
+
+    #surpriseMessage h3 {
+        font-size: 21px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+}
