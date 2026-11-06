@@ -1,0 +1,159 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #100d1c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    background-color: #19132b;
+    padding: 20px 8%;
+    border-bottom: 1px solid #33264f;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #c4a7ff;
+    font-size: 20px;
+}
+
+nav time {
+    color: #aaa0bc;
+    font-size: 14px;
+}
+
+/* Hero Section */
+
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    color: #c4a7ff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    color: #c5bbd6;
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+
+button {
+    background-color: #8b5cf6;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #7542db;
+    transform: translateY(-3px);
+}
+
+/* Birthday Message */
+
+.message {
+    background-color: #19132b;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.message p {
+    color: #c5bbd6;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ALC Photo */
+
+.memory {
+    background-color: #211938;
+}
+
+.memory-text {
+    color: #c5bbd6;
+    margin-bottom: 30px;
+}
+
+.photo-container {
+    max-width: 850px;
+    margin: 30px auto 0;
+}
+
+.photo-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #5d477f;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.photo-container p {
+    color: #c5bbd6;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Final Birthday Message */
+
+.final-message {
+    background-color: #19132b;
+}
+
+.final-message p {
+    color: #c5bbd6;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0b0914;
+    text-align: center;
+    padding: 25px;
+    color: #aaa0bc;
+    font-size: 14px;
+}
