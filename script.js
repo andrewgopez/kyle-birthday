@@ -46,12 +46,13 @@ celebrateBtn.addEventListener("click", function () {
 finalCelebrateBtn.addEventListener("click", function () {
     celebrate();
 
-    // Reveal the surprise message
-    surpriseMessage.classList.remove("hidden");
+    // Toggle the surprise message
+    surpriseMessage.classList.toggle("hidden");
 
-    // Change button text
-    finalCelebrateBtn.textContent = "Surprise Unlocked! 🎉";
-
-    // Disable button after clicking
-    finalCelebrateBtn.disabled = true;
+    // Update button text
+    if (surpriseMessage.classList.contains("hidden")) {
+        finalCelebrateBtn.textContent = "Celebrate One More Time! 🎊";
+    } else {
+        finalCelebrateBtn.textContent = "Hide Surprise 🎁";
+    }
 });
