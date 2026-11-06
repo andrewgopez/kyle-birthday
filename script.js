@@ -3,6 +3,7 @@
 // Get the buttons
 const celebrateBtn = document.getElementById("celebrateBtn");
 const finalCelebrateBtn = document.getElementById("finalCelebrateBtn");
+const surpriseMessage = document.getElementById("surpriseMessage");
 
 // Purple-themed colours
 const colors = ["#c4a7ff", "#9b70e8", "#ffffff", "#e2c5ff"];
@@ -44,4 +45,13 @@ celebrateBtn.addEventListener("click", function () {
 // Final Celebration Button
 finalCelebrateBtn.addEventListener("click", function () {
     celebrate();
+
+    // Reveal the surprise message
+    surpriseMessage.classList.remove("hidden");
+
+    // Change button text
+    finalCelebrateBtn.textContent = "Surprise Unlocked! 🎉";
+
+    // Disable button after clicking
+    finalCelebrateBtn.disabled = true;
 });
