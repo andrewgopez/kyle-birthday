@@ -59,16 +59,43 @@ section {
     margin-bottom: 15px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
 .hero-text {
     color: #c5bbd6;
     font-size: 18px;
     max-width: 600px;
     margin-bottom: 30px;
+}
+
+/* Glowing Birthday Heading */
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px rgba(196, 167, 255, 0.5),
+        0 0 20px rgba(139, 92, 246, 0.4),
+        0 0 40px rgba(139, 92, 246, 0.2);
+
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Glow Animation */
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 10px rgba(196, 167, 255, 0.4),
+            0 0 20px rgba(139, 92, 246, 0.3),
+            0 0 30px rgba(139, 92, 246, 0.2);
+    }
+
+    to {
+        text-shadow:
+            0 0 15px rgba(196, 167, 255, 0.8),
+            0 0 30px rgba(139, 92, 246, 0.6),
+            0 0 50px rgba(139, 92, 246, 0.4);
+    }
 }
 
 /* Buttons */
@@ -120,6 +147,9 @@ section h2 {
 .photo-container {
     max-width: 850px;
     margin: 30px auto 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .photo-container img {
@@ -135,6 +165,18 @@ section h2 {
     color: #c5bbd6;
     font-style: italic;
     margin-top: 15px;
+}
+
+/* Photo Reveal Animation */
+
+.photo-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button:disabled {
+    cursor: default;
+    opacity: 0.8;
 }
 
 /* Final Birthday Message */

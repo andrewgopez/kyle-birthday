@@ -4,6 +4,8 @@
 const celebrateBtn = document.getElementById("celebrateBtn");
 const finalCelebrateBtn = document.getElementById("finalCelebrateBtn");
 const surpriseMessage = document.getElementById("surpriseMessage");
+const revealPhotoBtn = document.getElementById("revealPhotoBtn");
+const photoContainer = document.getElementById("photoContainer");
 
 // Purple-themed colours
 const colors = ["#c4a7ff", "#9b70e8", "#ffffff", "#e2c5ff"];
@@ -55,4 +57,21 @@ finalCelebrateBtn.addEventListener("click", function () {
     } else {
         finalCelebrateBtn.textContent = "Hide Surprise 🎁";
     }
+});
+
+// Reveal ALC Photo
+revealPhotoBtn.addEventListener("click", function () {
+
+    photoContainer.classList.remove("hidden");
+
+    // Allow the browser to apply the initial hidden state
+    requestAnimationFrame(function () {
+        photoContainer.classList.add("show");
+    });
+
+    // Change button text
+    revealPhotoBtn.textContent = "Memory Unlocked! 💜";
+
+    // Disable button
+    revealPhotoBtn.disabled = true;
 });
