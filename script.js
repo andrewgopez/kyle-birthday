@@ -7,6 +7,9 @@ const surpriseMessage = document.getElementById("surpriseMessage");
 const revealPhotoBtn = document.getElementById("revealPhotoBtn");
 const photoContainer = document.getElementById("photoContainer");
 
+const musicBtn = document.getElementById("musicBtn");
+const birthdayMusic = document.getElementById("birthdayMusic");
+
 // Purple-themed colours
 const colors = ["#c4a7ff", "#9b70e8", "#ffffff", "#e2c5ff"];
 
@@ -74,4 +77,28 @@ revealPhotoBtn.addEventListener("click", function () {
 
     // Disable button
     revealPhotoBtn.disabled = true;
+});
+
+// Birthday Music
+musicBtn.addEventListener("click", function () {
+    if (birthdayMusic.paused) {
+        birthdayMusic.play()
+            .then(function () {
+                musicBtn.textContent = "Pause Music ⏸️";
+                musicBtn.setAttribute("aria-pressed", "true");
+            })
+            .catch(function () {
+                musicBtn.textContent = "Music Unavailable 🎵";
+            });
+    } else {
+        birthdayMusic.pause();
+        musicBtn.textContent = "Play Birthday Music 🎵";
+        musicBtn.setAttribute("aria-pressed", "false");
+    }
+});
+
+// Reset button when music finishes
+birthdayMusic.addEventListener("ended", function () {
+    musicBtn.textContent = "Play Birthday Music 🎵";
+    musicBtn.setAttribute("aria-pressed", "false");
 });

@@ -66,6 +66,23 @@ section {
     margin-bottom: 30px;
 }
 
+/* Birthday Music Button */
+#musicBtn {
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+}
+
+#musicBtn:hover {
+    background: #9b70e8;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(155, 112, 232, 0.3);
+}
+
 /* Glowing Birthday Heading */
 
 .hero h1 {
